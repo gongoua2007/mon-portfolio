@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/galerie.css">
+</head>
+<body>
+    <img src="images/photo.jpg" alt="Photo de profil"
+         width="180" height="180"
+         style="border-radius:50%; object-fit:cover; border:4px solid #007acc; box-shadow:0 0 10px rgba(0,0,0,0.2);">
+
+    <header>
+        <h1>Bienvenue dans mon portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="Mes competences.html">Mes compétences</a></li>
+                <li><a href="Contacts.html">Mon contact</a></li>
+                <li><a href="#projets">Mes projets</a></li>
+                <li><a href="https://www.univ-littoral.fr" target="_blank">ULCO campus calais</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+     
+    <main> 
+        <section class="intro"> 
+            <h2>À propos de moi</h2>
+            <p>Je suis étudiant en Licence 1 Informatique à l’ULCO. Passionné par les nouvelles technologies, je développe progressivement mes compétences en programmation, en conception web et en réseaux informatiques.</p> 
+        </section> 
+            </main>
+    <footer> 
+     <h3>Contacts</h3>   
+      <p><strong>👤Nom :</strong> Kate N'Guessan Yohan</p>
+    <p><strong>📧mail :</strong> katenguessanyohan@gmail.com</p>
+    <p><strong>📞Téléphone :</strong> 07 58 90 09 25</p>
+      <hr>
+<section class="galerie" id="projets">
+  <h2>Mes projets</h2>
+  <div class="galerie-container">
+    <div class="image-card">
+     <a href="projet1.html"><img src="images/log.png" alt="Projet 1"></a>
+      <div class="overlay">Projet1:application web</div>
+    </div>
+    <div class="image-card">
+      <a href="projet2.html"><img src="images/image1.webp" alt="Projet 2"></a>
+      <div class="overlay">Projet2:Gestion de base de données</div>
+    </div>
+    <div class="image-card">
+      <a href="projet3.html"><img src="images/auto.jpeg" alt="Projet 3"></a>
+      <div class="overlay">Projet3: automatisation</div>
+    </div>
+  </div>
+</section>
+<button id="btnTop" title="Remonter en haut">↑</button>
+</footer>
+<script>
+  const btnTop = document.getElementById("btnTop");
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btnTop.style.display = "block";
+    } else {
+      btnTop.style.display = "none";
+    }
+  };
+  btnTop.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+</script>
+
+</body>
+</html>

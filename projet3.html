@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 3 - Automatisation</title>
+    <link rel="stylesheet" href="css/projet3.css">
+</head>
+<body>
+    <header>
+        <h1>Projet 3 : Automatisation de tâches avec Python</h1>
+    </header>
+
+    <main>
+        <section class="description">
+            <h2>Présentation du projet</h2>
+            <p>
+                Dans le cadre de ma Licence 1 Informatique, j’ai réalisé un projet d’automatisation
+                consistant à créer un script Python capable de trier automatiquement des fichiers
+                dans différents dossiers selon leur type (images, documents, vidéos, etc.).
+            </p>
+        </section>
+
+        <section class="objectifs">
+            <h2>Objectifs du projet</h2>
+            <ul>
+                <li>Découvrir les scripts d’automatisation en Python</li>
+                <li>Utiliser les modules <code>os</code> et <code>shutil</code> pour manipuler le système de fichiers</li>
+                <li>Apprendre à gérer les erreurs et les chemins relatifs</li>
+                <li>Créer une interface simple en ligne de commande</li>
+            </ul>
+        </section>
+
+        <section class="galerie">
+            <h2>Exemples et captures</h2>
+            <div class="images-container">
+                <div class="image-card">
+                    <img src="images/auto1.jpeg" alt="Interface console">
+                </div>
+                <div class="image-card">
+                    <img src="images/auto2.jpg" alt="Résultat du tri automatique">
+                </div>
+                <div class="image-card">
+                    <img src="images/auto3.png" alt="Organisation finale des dossiers">
+                </div>
+            </div>
+        </section>
+
+        <section class="techno">
+            <h2>Technologies et langages utilisés</h2>
+            <p><strong>Langage :</strong> Python</p>
+            <p><strong>Bibliothèques :</strong> os, shutil, time</p>
+            <p><strong>Outil :</strong> Visual Studio Code</p>
+        </section>
+
+        <section class="code-exemple">
+            <h2>Exemple de code Python</h2>
+<pre><code class="python">
+import os, shutil
+
+source = "C:/Users/Etudiant/Downloads"
+destination = "C:/Users/Etudiant/Organised"
+
+for file in os.listdir(source):
+    name, ext = os.path.splitext(file)
+    ext = ext[1:]  # retirer le point
+    folder = os.path.join(destination, ext)
+    os.makedirs(folder, exist_ok=True)
+    shutil.move(os.path.join(source, file), os.path.join(folder, file))
+print("Tri automatique terminé !")
+</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 - Projet universitaire -</p>
+        <a href="index.html" class="retour">⬅ Retour à l'accueil</a>
+    </footer>
+</body>
+</html>
