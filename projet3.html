@@ -33,17 +33,18 @@
 
         <section class="galerie">
             <h2>Exemples et captures</h2>
-            <div class="images-container">
-                <div class="image-card">
+
+            <section class="images-container">
+                <figure class="image-card">
                     <img src="images/auto1.jpeg" alt="Interface console">
-                </div>
-                <div class="image-card">
+                </figure>
+                <figure class="image-card">
                     <img src="images/auto2.jpg" alt="Résultat du tri automatique">
-                </div>
-                <div class="image-card">
+                </figure>
+                <figure class="image-card">
                     <img src="images/auto3.png" alt="Organisation finale des dossiers">
-                </div>
-            </div>
+                </figure>
+            </section>
         </section>
 
         <section class="techno">
@@ -55,6 +56,7 @@
 
         <section class="code-exemple">
             <h2>Exemple de code Python</h2>
+
 <pre><code class="python">
 import os, shutil
 
@@ -69,6 +71,7 @@ for file in os.listdir(source):
     shutil.move(os.path.join(source, file), os.path.join(folder, file))
 print("Tri automatique terminé !")
 </code></pre>
+
         </section>
     </main>
 
